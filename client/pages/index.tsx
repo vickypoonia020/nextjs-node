@@ -22,7 +22,7 @@ function index() {
       {
         people.map((person, index) => (
           <div key={index}>
-            {person}
+            All Good, First commit with a branch. {person} 
           </div>
         ))
       }
