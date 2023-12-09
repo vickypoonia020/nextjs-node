@@ -1,0 +1,40 @@
+.home-img {
+  img {
+    width: 100%;
+    object-fit: fill;
+    height: 100vh;
+  }
+}
+.home-text-block {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  bottom: 570px;
+  color: white;
+  margin-left: 50px;
+  h3 {
+    margin: auto auto 40px 5px;
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+  }
+
+  .order-btn-block {
+    width: 200px;
+    .btn-order-now {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      padding: 8px 10px;
+      font-size: 20px;
+      border-radius: 15px;
+    }
+    & :hover {
+      cursor: pointer;
+      background-color: #fbf5df;
+    }
+  }
+}
