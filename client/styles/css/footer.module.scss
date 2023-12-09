@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 840px) {
+    flex-wrap: wrap;
+  }
+  .imageContainer {
+    margin: 10px;
+    text-align: center;
+  
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+
