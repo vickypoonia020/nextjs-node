@@ -1,7 +1,7 @@
 # nextjs-node
  Steps for setup:-
 
-Client-
+Client- 
  Initials:- 
  1. git init(To get node based server setup)
  2. install Express
