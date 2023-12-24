@@ -6,7 +6,7 @@ function index() {
   return (
     <>
       <div className="home-img">
-        <img src="/images/HomeBanner.jpg" alt="home-img.jpg" />
+        <img src="/images/bg-img2.jpg" alt="home-img.jpg" />
       </div>
       <div className="home-text-block">
         <div home-txt>
