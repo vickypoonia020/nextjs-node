@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Lobster&family=Merriweather&family=PT+Serif&family=Roboto&family=Rubik+Spray+Paint&family=Secular+One&family=Shrikhand&display=swap");
 .footer {
+  font-family: 'Roboto';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +11,9 @@
   .imageContainer {
     margin: 10px;
     text-align: center;
-  
+
     img {
       max-width: 100%;
     }
   }
 }
-
-
