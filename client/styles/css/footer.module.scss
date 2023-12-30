@@ -64,13 +64,10 @@
 }
 
 .content_section {
-  // margin-top: 0px;
   margin-bottom: 140px;
-  // background-attachment: scroll !important;
 }
 
 .contact_item {
-  // padding-left: 150px;
   display: flex;
   color: #444;
   column-gap: 100px;
@@ -118,9 +115,37 @@
 }
 
 .ci_text {
-  // font-family: "Open Sans", arial, sans-serif;
   color: #777 !important;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
+}
+
+.container{
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 100px;
+}
+
+.Dish{
+  padding: 0px;
+}
+
+.fbDish {
+  display: flex;
+  gap: 20px; // Adjust the space between links as needed
+  text-align: center;
+  justify-content: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+}
+
+.footer_made{
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
