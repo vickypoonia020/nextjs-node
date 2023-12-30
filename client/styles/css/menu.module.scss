@@ -1,0 +1,53 @@
+.menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  background-image: url("https://www.giulianorestaurant.co.uk/wp-content/uploads/2017/10/Giuliano-Restaurant-Antipasti.jpg");
+  // min-height: 200px;
+  height: auto;
+  max-width: 100%;
+  padding-top: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu_title {
+  max-width: 600px;
+  text-align: center;
+  justify-content: center;
+  // padding-top: 5rem;
+  padding-bottom: 4.5rem;
+  margin-right: 0px;
+  // background-color: aqua;
+}
+.menu_title h1{
+  margin: 40px 200px;
+  padding: 5px;
+  background-color: rgb(242, 255, 0);
+}
+.menu_title p{
+  padding: 5px;
+  color: rgb(242, 255, 0);
+  // background-color: rgb(244, 246, 208);s
+}
+
+.menu_title button{
+  // margin: 40px 200px;
+  padding: 5px;
+  background-color: rgb(242, 255, 0);
+  border-radius: 5px;
+  border-color: transparent;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.menuCategory{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 100px;
+}
