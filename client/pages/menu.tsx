@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "../styles/css/menu.module.scss";
 import Image from "next/image";
+import Main from "../components/shared/Menu/Main";
 
 const menu = () => {
   const [activeTab, setActiveTab] = useState("Main");
@@ -12,13 +13,13 @@ const menu = () => {
   const renderContent = () => {
     switch (activeTab) {
       case "Main":
-        return <div>Main Menu Tab</div>;
+        return <Main props={"Main Course"} />;
       case "Lunch":
-        return <div>Lunch Tab</div>;
+        return <Main props={"Lunch"} />;
       case "Specials":
-        return <div>Specials Tab</div>;
+        return <Main props={"Specials"} />;
       case "catering":
-        return <div>catering Tab</div>;
+        return <Main props={"Catering"} />;
       default:
         return null;
     }
@@ -36,13 +37,17 @@ const menu = () => {
               world peace, but we’re pretty sure if we fire up enough BBQ, it
               will.
             </p> */}
-            <div>
-              <button onClick={() => changeTab("Main")}>Main Menu</button>
-              <button onClick={() => changeTab("Lunch")}>
-                Lunch Happy Hour
-              </button>
-              <button onClick={() => changeTab("Specials")}>Specials</button>
-              <button onClick={() => changeTab("catering")}>catering</button>
+            <div className={`${styles.menuButtons}`}>
+              <div className={`${styles.menuButtonsOne}`}>
+                <button onClick={() => changeTab("Main")}>Main Menu</button>
+                <button onClick={() => changeTab("Lunch")}>
+                  Lunch Happy Hour
+                </button>
+              </div>
+              <div className={`${styles.menuButtonsTwo}`}>
+                <button onClick={() => changeTab("Specials")}>Specials</button>
+                <button onClick={() => changeTab("catering")}>catering</button>
+              </div>
             </div>
           </div>
         </section>
