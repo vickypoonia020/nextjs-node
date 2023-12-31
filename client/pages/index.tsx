@@ -4,7 +4,7 @@ import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDo
 
 function index() {
   return (
-    <>
+    <div className="home">
       <div className="home-img">
         <img src="/images/bg-img2.jpg" alt="home-img.jpg" />
       </div>
@@ -14,14 +14,14 @@ function index() {
           <h3>Something Hot. Something Spicy.</h3>
         </div>
         <div className="order-btn-block">
-          <Link href="/order-now" style={{textDecoration:"none"}}>
+          <Link href="/order-now" style={{ textDecoration: "none" }}>
             <button className="btn-order-now">
               Order Now <KeyboardDoubleArrowRightOutlinedIcon />
             </button>
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
