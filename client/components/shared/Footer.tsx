@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../../styles/css/footer.module.scss";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Footer = () => {
   const handleScrollToTop = () => {
@@ -24,9 +25,15 @@ const Footer = () => {
       }
     };
   }, [handleScrollToTop]);
+
+  const router = useRouter();
+  const isHomePage = router.pathname === "/" ? true : false;
+
   return (
     <footer>
       <div className={`${styles.row}`}>
+        {isHomePage ? (
+          <>
         <div className={`${styles.up_column_}`}>
           <h2 className={`${styles.section_title}`}>FIND US</h2>
         </div>
@@ -104,6 +111,8 @@ const Footer = () => {
             </div>
           </section>
         </div>
+        </>
+        ) : null}
       </div>
       <div className={`${styles.container}`}>
         <div data-wow-duration="1.5s">
