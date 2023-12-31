@@ -27,91 +27,99 @@ const Footer = () => {
   }, [handleScrollToTop]);
 
   const router = useRouter();
-  const isHomePage = router.pathname === "/" ? true : false;
+  const isHomePage =
+    router.pathname === "/" || router.pathname === "/book-a-table"
+      ? true
+      : false;
+  const isfind = router.pathname != "/book-a-table" ? true : false;
 
   return (
     <footer>
       <div className={`${styles.row}`}>
         {isHomePage ? (
           <>
-        <div className={`${styles.up_column_}`}>
-          <h2 className={`${styles.section_title}`}>FIND US</h2>
-        </div>
-        <div className={`${styles.up_column}`}>
-          <section className={`${styles.content_section}`}>
-            <div className={`${styles.rowD}`}>
-              <div className={`${styles.down_column}`}>
-                <div className={`${styles.contact_item}`}>
-                  <div>
-                    <div className={`${styles.ci_icon}`}>
-                      <Image
-                        src="/images/icon_callB.png"
-                        alt="call iconB"
-                        width={18}
-                        height={18}
-                        className={styles.image}
-                      />
+            {isfind ? (
+              <>
+                <div className={`${styles.up_column_}`}>
+                  <h2 className={`${styles.section_title}`}>FIND US</h2>
+                </div>
+              </>
+            ) : null}
+            <div className={`${styles.up_column}`}>
+              <section className={`${styles.content_section}`}>
+                <div className={`${styles.rowD}`}>
+                  <div className={`${styles.down_column}`}>
+                    <div className={`${styles.contact_item}`}>
+                      <div>
+                        <div className={`${styles.ci_icon}`}>
+                          <Image
+                            src="/images/icon_callB.png"
+                            alt="call iconB"
+                            width={18}
+                            height={18}
+                            className={styles.image}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className={`${styles.ci_title}`}>Call Us</div>
+                        <div className={`${styles.ci_text}`}>01625 535 245</div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className={`${styles.ci_title}`}>Call Us</div>
-                    <div className={`${styles.ci_text}`}>01625 535 245</div>
+                  <div className={`${styles.down_column}`}>
+                    <div className={`${styles.contact_item}`}>
+                      <div
+                        className={`${styles.ci_icon} ${styles.ci_icon_location}`}
+                      >
+                        <Image
+                          src="/images/icon_location.png"
+                          alt="call iconB"
+                          width={18}
+                          height={18}
+                          className={styles.image}
+                        />
+                      </div>
+                      <div>
+                        <div className={`${styles.ci_title}`}>ADDRESS</div>
+                        <div
+                          className={`${styles.ci_text}`}
+                          style={{ fontSize: "15px" }}
+                        >
+                          121 Wilmslow Road
+                          <br />
+                          Handforth
+                          <br />
+                          Cheshire
+                          <br />
+                          SK9 3HX
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className={`${styles.down_column}`}>
-                <div className={`${styles.contact_item}`}>
-                  <div
-                    className={`${styles.ci_icon} ${styles.ci_icon_location}`}
-                  >
-                    <Image
-                      src="/images/icon_location.png"
-                      alt="call iconB"
-                      width={18}
-                      height={18}
-                      className={styles.image}
-                    />
-                  </div>
-                  <div>
-                    <div className={`${styles.ci_title}`}>ADDRESS</div>
-                    <div
-                      className={`${styles.ci_text}`}
-                      style={{ fontSize: "15px" }}
-                    >
-                      121 Wilmslow Road
-                      <br />
-                      Handforth
-                      <br />
-                      Cheshire
-                      <br />
-                      SK9 3HX
+                  <div className={`${styles.down_column}`}>
+                    <div className={`${styles.contact_item}`}>
+                      <div className={` ${styles.ci_icon_email}`}>
+                        <Image
+                          src="/images/icon_email.png"
+                          alt="call iconB"
+                          width={25}
+                          height={25}
+                          className={styles.image}
+                        />
+                      </div>
+                      <div>
+                        <div className={`${styles.ci_title}`}>EMAIL</div>
+                        <div className={`${styles.ci_text}`}>
+                          bookings@giulianorestaurant.co.uk
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={`${styles.down_column}`}>
-                <div className={`${styles.contact_item}`}>
-                  <div className={` ${styles.ci_icon_email}`}>
-                    <Image
-                      src="/images/icon_email.png"
-                      alt="call iconB"
-                      width={25}
-                      height={25}
-                      className={styles.image}
-                    />
-                  </div>
-                  <div>
-                    <div className={`${styles.ci_title}`}>EMAIL</div>
-                    <div className={`${styles.ci_text}`}>
-                      bookings@giulianorestaurant.co.uk
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </section>
             </div>
-          </section>
-        </div>
-        </>
+          </>
         ) : null}
       </div>
       <div className={`${styles.container}`}>
