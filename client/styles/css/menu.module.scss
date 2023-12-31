@@ -1,0 +1,90 @@
+.menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  background-image: url("https://www.giulianorestaurant.co.uk/wp-content/uploads/2017/10/Giuliano-Restaurant-Antipasti.jpg");
+  // min-height: 200px;
+  height: auto;
+  max-width: 100%;
+  padding-top: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu_title {
+  max-width: 600px;
+  text-align: center;
+  justify-content: center;
+  // padding-top: 5rem;
+  padding-bottom: 4.5rem;
+  margin-right: 0px;
+  // background-color: aqua;
+}
+.menu_title h1 {
+  margin: 40px 200px;
+  padding: 5px;
+  background-color: rgb(242, 255, 0);
+}
+.menu_title p {
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  color: rgb(228, 244, 224);
+  // background-color: rgb(244, 246, 208);s
+}
+
+.menuCategory {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  // font-size: 100px;
+}
+
+.menuButtons,
+.menuButtonsOne,
+.menuButtonsTwo {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  button {
+    padding: 5px;
+    background-color: rgb(202, 247, 195);
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .menuButtons {
+    display: block;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .menuButtonsOne {
+    padding-bottom: 20px;
+  }
+  .menuButtonsOne,
+  .menuButtonsTwo {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    button {
+      padding: 5px;
+      background-color: rgb(202, 247, 195);
+      border-radius: 5px;
+      border-color: transparent;
+      cursor: pointer;
+    }
+  }
+}

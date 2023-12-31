@@ -1,0 +1,61 @@
+.bookTable {
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.bookTableDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 840px) {
+    flex-wrap: wrap;
+  }
+  .imageContainer {
+    margin: 10px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.bookCalender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // width: 300px;
+  // height: 300px;
+  padding: 50px 0px 100px 0px;
+}
+
+.bookDropDate {
+  padding-bottom: 100px;
+}
+
+.customCalendar {
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.EnterDetails {
+  display: flex;
+}
+
+.submitButton {
+  button {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
