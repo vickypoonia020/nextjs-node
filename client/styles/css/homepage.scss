@@ -2,7 +2,9 @@
 @import "./mixin.scss";
 
 .home {
+  font-family: "Roboto";
   width: 100%;
+  // <------- CSS for home backgound image and text ------->
   .home-img {
     font-family: "Roboto";
     width: 100%;
@@ -83,6 +85,134 @@
     }
     @include md {
       margin: 30% auto 15% 3%;
+    }
+  }
+
+  // <----------- CSS for Home Menu Block -------->
+  .home-menu-block {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5%;
+    .menu-info {
+      display: flex;
+      justify-content: space-evenly;
+      .home-menu-itm {
+        width: 32%;
+        height: 345px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: opacity 0.4s ease;
+          z-index: 99;
+        }
+        p {
+          position: relative;
+          top: -65%;
+          visibility: hidden;
+          transform: translateY(100px);
+          transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+          z-index: 0;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        &:hover {
+          cursor: pointer;
+          img {
+            opacity: 0.3;
+            ::before {
+              background-color: red($color: #000000);
+            }
+          }
+          p {
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+  //<-------- CSS for about us block --------->
+  .about-us-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 100px;
+    .about-us-left-block {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      .about-us-img-1,
+      .about-us-img-2,
+      .about-us-img-3,
+      .about-us-img-4 {
+        margin: 10px;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .about-us-img-2 {
+        img {
+          width: 60%;
+          height: 70%;
+          margin-top: 65px;
+        }
+      }
+      .about-us-img-3 {
+        img {
+          width: 60%;
+          height: 70%;
+          margin-left: 140px;
+        }
+      }
+      .about-us-img-1,
+      .about-us-img-3 {
+        flex: 1 1 calc(50% - 20px);
+        margin: 10px;
+      }
+
+      .about-us-img-2,
+      .about-us-img-4 {
+        flex: 1 1 calc(50% - 20px); /* Two images in another line */
+        margin: 10px;
+      }
+    }
+    .about-us-right-block {
+      text-align: center;
+      width: 50%;
+      h3 {
+        font-size: 35px;
+      }
+      h1 {
+        font-size: 25px;
+        color: orange;
+      }
+      .text-block {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .text-block-itm {
+          flex: 0 1 calc(50% - 20px);
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span {
+            color: #fea116;
+            font-size: 40px;
+            font-weight: 900;
+          }
+
+          p {
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 }
