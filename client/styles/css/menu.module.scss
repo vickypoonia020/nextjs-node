@@ -5,6 +5,11 @@
   justify-content: center;
   color: #000000;
   background-image: url("https://www.giulianorestaurant.co.uk/wp-content/uploads/2017/10/Giuliano-Restaurant-Antipasti.jpg");
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url(https://www.giulianorestaurant.co.uk/wp-content/uploads/2017/10/Giuliano-Restaurant-Antipasti.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   // min-height: 200px;
   height: auto;
   max-width: 100%;
@@ -12,6 +17,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  // opacity: 1;
+  .heading {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    animation: slideInDown 0.5s ease;
+  }
 }
 
 .menu_title {
@@ -21,19 +33,33 @@
   // padding-top: 5rem;
   padding-bottom: 4.5rem;
   margin-right: 0px;
-  // background-color: aqua;
-}
-.menu_title h1 {
-  margin: 40px 200px;
-  padding: 5px;
-  background-color: rgb(242, 255, 0);
-}
-.menu_title p {
-  text-align: center;
-  justify-content: center;
-  padding: 5px;
-  color: rgb(228, 244, 224);
-  // background-color: rgb(244, 246, 208);s
+  h1 {
+    padding: 5px;
+  }
+  p {
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+  }
+
+  .heading {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    animation: slideInDown 0.5s ease;
+  }
+
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
 
 .menuCategory {
@@ -41,7 +67,6 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  // font-size: 100px;
 }
 
 .menuButtons,
@@ -52,9 +77,11 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  // font-size: 3rem;
+  // color: #fff;
   button {
     padding: 5px;
-    background-color: rgb(202, 247, 195);
+    font-size: 1rem;
     border-radius: 5px;
     border-color: transparent;
     cursor: pointer;
@@ -81,7 +108,7 @@
     justify-content: center;
     button {
       padding: 5px;
-      background-color: rgb(202, 247, 195);
+      font-size: 1rem;
       border-radius: 5px;
       border-color: transparent;
       cursor: pointer;
