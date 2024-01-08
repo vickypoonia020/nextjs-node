@@ -29,14 +29,7 @@ const menu = () => {
       <div className={`${styles.menu}`}>
         <section>
           <div className={`${styles.menu_title}`}>
-            <h1>Menus</h1>
-            {/* <p>
-              A culinary tour of BBQ traditions from around this great nation
-              and this beautiful planet. 1.8 million years ago, humans first
-              began cooking meat with fire. For some reason, this hasn’t led to
-              world peace, but we’re pretty sure if we fire up enough BBQ, it
-              will.
-            </p> */}
+            <h1 className={styles.heading}>Food Menu</h1>
             <div className={`${styles.menuButtons}`}>
               <div className={`${styles.menuButtonsOne}`}>
                 <button onClick={() => changeTab("Main")}>Main Menu</button>
