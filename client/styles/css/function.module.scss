@@ -1,0 +1,25 @@
+.parallax2 {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.8),
+    rgba(33, 32, 31, 0.9)
+  );
+  background-image: url("/images/Starters_Menu_bg.jpg");
+}
+
+.parallax2 {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (max-resolution: 192dpi) and (min-width: 125em) {
+    background-image: url("/images/Starters_Menu_bg.jpg");
+  }
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 40vh;
+  // -webkit-clip-path: polygon(0 0, 100% 16vh, 100% 100%, 0 100%);
+  // clip-path: polygon(0 0, 100% 16vh, 100% 100%, 0 100%);
+  margin-top: -34vh;
+}
