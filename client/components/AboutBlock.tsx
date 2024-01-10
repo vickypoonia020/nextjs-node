@@ -66,6 +66,10 @@ const AboutBlock = () => {
             <span>10</span> <p>Branches All Over India</p>
           </div>
         </div>
+        <div className="explore-more-btn">
+          <Link href="/offers">
+          <button>Explore More</button></Link>
+        </div>
       </div>
     </>
   );

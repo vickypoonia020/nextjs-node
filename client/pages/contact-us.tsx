@@ -17,8 +17,8 @@ const contact = () => {
         <Image
           src="/images/contact-us.jpg"
           alt="contact-us"
-          width={100}
-          height={100}
+          width={600}
+          height={600}
         />
       </div>
       <div className={`${contactStyle.middle_block}`}>
