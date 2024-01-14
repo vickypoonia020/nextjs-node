@@ -13,6 +13,21 @@
     @content;
   }
 }
+@mixin screen1_510 {
+  @media (min-width: 1px) and (max-width: 510px) {
+    @content;
+  }
+}
+@mixin screen511_640 {
+  @media (min-width: 511px) and (max-width: 640px) {
+    @content;
+  }
+}
+@mixin screen1_767 {
+  @media (min-width: 1px) and (max-width: 767px) {
+    @content;
+  }
+}
 
 // 1 to 1023
 @mixin md_double {

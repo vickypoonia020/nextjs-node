@@ -59,7 +59,7 @@ function index() {
         <AboutBlock />
       </div>
       <div className="book-a-table-home-block">
-        <BookTableBlock />
+       <BookTableBlock/>
       </div>
     </div>
   );

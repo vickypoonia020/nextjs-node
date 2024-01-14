@@ -155,6 +155,9 @@
         }
       }
       .about-us-img-2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
         img {
           width: 60%;
           height: 70%;
@@ -162,10 +165,11 @@
         }
       }
       .about-us-img-3 {
+        display: flex;
+        justify-content: flex-end;
         img {
           width: 60%;
           height: 70%;
-          margin-left: 140px;
         }
       }
       .about-us-img-1,
@@ -176,16 +180,20 @@
 
       .about-us-img-2,
       .about-us-img-4 {
-        flex: 1 1 calc(50% - 20px); /* Two images in another line */
+        flex: 1 1 calc(50% - 20px);
         margin: 10px;
       }
-      @include xsm {
-        flex-direction: row !important;
+      flex-direction: row !important;
+      @include md_double {
+        width: 100%;
       }
     }
     .about-us-right-block {
       text-align: center;
       width: 50%;
+      @include md_double {
+        width: 100%;
+      }
       h3 {
         font-size: 35px;
       }
@@ -197,6 +205,9 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        @include md_double {
+          justify-content: center;
+        }
 
         .text-block-itm {
           flex: 0 1 calc(50% - 20px);
@@ -221,6 +232,10 @@
         height: 48px;
         margin-left: 70px;
         padding: 10px 25px;
+        @include md_double {
+          margin-left: auto;
+          margin-right: auto;
+        }
         button {
           width: 100%;
           height: 100%;
@@ -238,10 +253,11 @@
         }
       }
     }
-    @include xsm {
+    @include md_double {
       flex-direction: column;
     }
   }
+    //<-------- CSS for book a talbe block --------->
   .book-a-table-home-block {
     margin-bottom: 100px;
     display: flex;
@@ -250,14 +266,22 @@
       background: url("/images/book-a-table.jpg");
       display: flex;
       justify-content: center;
+      align-items: center;
       background-repeat: no-repeat;
       background-size: cover;
       width: 50%;
       height: auto;
+      @include md_double {
+        height: 50vh;
+        width: 100%;
+      }
     }
     .book-table-right-block {
       background: #0f172b !important;
       width: 50%;
+      @include md_double {
+        width: 100%;
+      }
       h2 {
         text-align: center;
         color: white;
@@ -273,48 +297,53 @@
             justify-content: space-between;
             .input-field {
               width: 15vw;
-              line-height: 3;
+              line-height: 2;
               flex: 1;
+              display: flex;
+              flex-direction: column;
               margin-right: 40px;
               margin-bottom: 20px;
               select {
                 width: 20vw;
-                height: 65px;
+                height: 45px;
                 background: white;
-                & :focus + div::after {
-                  content: "\25BC"; /* Down arrow character */
-                  font-size: 12px;
-                  color: #333;
-                  position: absolute;
-                  right: 8px;
-                  top: 50%;
-                  transform: translateY(-50%);
+                font-size: 15px;
+                font-family: "Roboto";
+                @include md_double {
+                  width: 100%;
                 }
               }
               input {
                 width: 100%;
-                height: 65px;
-                &::placeholder {
-                  font-size: 20px;
-                  text-align: center;
-                }
+                height: 45px;
               }
               .MuiOutlinedInput-root {
-                height: 65px;
+                height: 45px;
                 width: 20vw;
                 background: white;
+                &::placeholder {
+                  display: none;
+                }
+                @include md_double {
+                  width: 100%;
+                }
+              }
+              label {
+                font-size: 15px;
+                color: white;
               }
             }
           }
           .input-field-text {
             width: 95%;
+            line-height: 2;
             textarea {
-              height: 12vh;
+              min-height: 20vh;
               width: 100%;
-              &::placeholder {
-                font-family: "Roboto";
-                font-size: 20px;
-              }
+            }
+            label {
+              font-size: 15px;
+              color: white;
             }
           }
           .check-availabilit-btn {
@@ -338,6 +367,9 @@
           }
         }
       }
+    }
+    @include md_double {
+      flex-direction: column;
     }
   }
 }
