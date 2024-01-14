@@ -2,12 +2,10 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const PORT = 8080;
+const menuController = require("./module_menu/src/controllers/MenuController")
 
 app.use(cors());
-
-app.get("/api/home", (req, res) => {
-  res.json({ message: "Liked it!", people: ["Arpan", "Jack", "Barry"] });
-});
+app.get("/list", menuController.getMenu);
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
