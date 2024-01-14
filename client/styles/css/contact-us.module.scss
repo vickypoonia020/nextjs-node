@@ -100,7 +100,6 @@
   .bottom_block {
     display: flex;
     padding: 50px;
-    width: 100%;
     .left_block {
       width: 50%;
       iframe {
@@ -135,11 +134,11 @@
         height: 30px;
         margin-top: -10px;
         @include xsm {
-          width: 100%;
+          width: 97%;
           margin-top: 0;
         }
         @include sm {
-          width: 100%;
+          width: 97%;
           margin-top: 0;
         }
         @include md {
@@ -148,13 +147,17 @@
       }
       textarea {
         border: 2px solid #d3d3d3;
-        width: 80%;
+        max-width: 80%;
         height: 100px;
         @include xsm {
-          width: 100%;
+          max-width: 97%;
         }
         @include sm {
-          width: 100%;
+          max-width: 100%;
+        }
+        &::placeholder {
+          font-size: 15px;
+          font-family: "Roboto";
         }
       }
       .form_input {

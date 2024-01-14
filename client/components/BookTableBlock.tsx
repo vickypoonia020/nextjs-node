@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 const BookTableBlock = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
   const {
     register,
     handleSubmit,
@@ -20,30 +21,30 @@ const BookTableBlock = () => {
           <form>
             <div className="name-email">
               <div className="input-field">
-                <input
-                  {...register("name", { required: true })}
-                  placeholder="Your Name"
-                />
+                <label>You Name</label>
+                <input {...register("name", { required: true })} />
                 {errors.lastName && <p>Name is required.</p>}
               </div>
               <div className="input-field">
-                <input
-                  {...register("email", { required: true })}
-                  placeholder="Your Email"
-                />
+                <label>You Email</label>
+                <input {...register("email", { required: true })} />
                 {errors.lastName && <p>Email is required.</p>}
               </div>
             </div>
             <div className="date-people">
               <div className="input-field">
+                <label>Date and Time</label>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                  <DatePicker />
+                  <DateTimePicker
+                    value={selectedDate}
+                    onChange={(newDate) => setSelectedDate(newDate)}
+                  />
                 </LocalizationProvider>
               </div>
               <div className="input-field">
+                <label>Number of People</label>
                 <select>
-                  <option selected>Nuber of People</option>
-                  <option>People-1</option>
+                  <option selected>People-1</option>
                   <option>People-2</option>
                   <option>People-3</option>
                   <option>People-4</option>
@@ -51,7 +52,8 @@ const BookTableBlock = () => {
               </div>
             </div>
             <div className="input-field-text">
-              <textarea placeholder=" Special Request"></textarea>
+              <label>Anything Special for you ?</label>
+              <textarea></textarea>
             </div>
             <div className="check-availabilit-btn">
               <button>Check Availability</button>
