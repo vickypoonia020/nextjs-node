@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../styles/css/footer.module.scss";
-import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
