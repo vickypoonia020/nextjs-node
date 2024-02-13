@@ -4,6 +4,7 @@ import Image from "next/image";
 import KeyboardDoubleArrowRightOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowRightOutlined";
 import AboutBlock from "@/components/AboutBlock";
 import BookTableBlock from "@/components/BookTableBlock";
+import ChefsBlock from "@/components/ChefsBlock";
 
 function index() {
   const homeMenuItemsData = [
@@ -60,6 +61,9 @@ function index() {
       </div>
       <div className="book-a-table-home-block">
        <BookTableBlock/>
+      </div>
+      <div className="chefs-block">
+        <ChefsBlock/>
       </div>
     </div>
   );
