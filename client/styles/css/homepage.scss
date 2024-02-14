@@ -373,9 +373,18 @@
     }
   }
     .chefs-block {
+      margin-bottom: 90px;
       h3 {
         font-size: 35px;
         text-align: center;
+      }
+      .MuiSvgIcon-root {
+        font-size: 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        &:hover {
+          fill: #FF8600;
+        }
       }
     }
 }
