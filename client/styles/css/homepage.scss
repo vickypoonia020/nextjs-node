@@ -36,13 +36,13 @@
       margin: auto auto 40px 5px;
       font-size: 30px;
       @include xsm {
-        font-size: 23px;
+        font-size: 21px;
       }
       @include sm {
-        font-size: 33px;
+        font-size: 30px;
       }
       @include md {
-        font-size: 43px;
+        font-size: 30px;
       }
     }
     h1 {
@@ -52,7 +52,10 @@
         font-size: 37px;
       }
       @include sm {
-        font-size: 60px;
+        font-size: 50px;
+      }
+      @include md {
+        font-size: 55px;
       }
     }
 
@@ -76,15 +79,15 @@
       }
     }
     @include xsm {
-      margin: 30% auto 70% 3%;
+      margin: 0 auto 25% 3%;
       max-width: 400px;
     }
     @include sm {
-      margin: 30% auto 50% 3%;
+      margin: 0 auto 10% 3%;
       max-width: 480px;
     }
     @include md {
-      margin: 30% auto 15% 3%;
+      margin: 0 auto 10% 3%;
     }
   }
 

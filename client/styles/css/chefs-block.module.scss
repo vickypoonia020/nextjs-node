@@ -1,6 +1,10 @@
+@import "./mixin.scss";
+
 .home_chefs_block {
   display: flex;
   justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
 
   .chefs_bg {
     width: 300px;

@@ -14,10 +14,11 @@ const Header = () => {
     const isSmallDevice = window.matchMedia("(max-width: 1023px)").matches;
     if (window.scrollY >= 100 || isSmallDevice) {
       setColor(true);
-    } else if (!isSmallDevice) {
-      setShowHamburger(false);
-    } else {
+    }else {
       setColor(false);
+    }
+    if (!isSmallDevice) {
+      setShowHamburger(false);
     }
   };
   useEffect(() => {
