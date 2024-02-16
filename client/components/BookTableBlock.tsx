@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
+import  Link  from "next/link";
 
 const BookTableBlock = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -56,7 +57,7 @@ const BookTableBlock = () => {
               <textarea></textarea>
             </div>
             <div className="check-availabilit-btn">
-              <button>Check Availability</button>
+              <button><Link href="/book-a-table">Check Availability</Link></button>
             </div>
           </form>
         </div>
